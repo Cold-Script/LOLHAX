@@ -48,21 +48,6 @@ local Library = loadstring(game:HttpGet(Repository .. "Library.lua"))()
 local ThemeManager = loadstring(game:HttpGet(Repository .. "addons/ThemeManager.lua"))()
 local SaveManager = loadstring(game:HttpGet(Repository .. "addons/SaveManager.lua"))()
 
-local ErrorMessageOut
-ErrorMessageOut = game:GetService("LogService").MessageOut:Connect(function(Message, Type)
-
-    if Type == Enum.MessageType.MessageError and not string.find(Message, "attempt to index nil with 'Value'") then
-        ErrorMessageOut:Disconnect()
-
-        setclipboard("Executor: " .. identifyexecutor() .. "\n\n" .. tostring(Message))
-        Library:Notify(" Lolhax has errored while loading and will now unload. The error has been copied to your clipboard, please report this on the LX discord server! ", 4.5)
-
-        task.delay(5, function()
-            Library:Unload()
-        end)
-    end
-
-end)
 local LocalPlayer = game.Players.LocalPlayer
 
 -- UI vvv
