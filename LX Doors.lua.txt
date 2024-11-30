@@ -42,7 +42,7 @@
 ]]
 
 local Loadtime = tick()
-local Repository = "https://raw.githubusercontent.com/RectangularObject/LinoriaLib/main/"
+local Repository = "https://raw.githubusercontent.com/Cold-Script/LinoriaLib/refs/heads/patch-3/"
 
 local Library = loadstring(game:HttpGet(Repository .. "Library.lua"))()
 local ThemeManager = loadstring(game:HttpGet(Repository .. "addons/ThemeManager.lua"))()
