@@ -52,7 +52,7 @@ local LocalPlayer = game.Players.LocalPlayer
 
 -- UI vvv
 
-local Window = Library:CreateWindow({ Title = " LOLHAX ┃ ".. LocalPlayer.Name, Center = true, AutoShow = true, TabPadding = 3, MenuFadeTime = 0.15 })
+local Window = Library:CreateWindow({ Title = " Wearspear ┃ Thanks : " .. game.Players.LocalPlayer.Name .. " ┃ Your ID : " .. game.Players.LocalPlayer.UserId, Center = true, AutoShow = true, TabPadding = 3, MenuFadeTime = 0.15 })
 local Tabs = { General = Window:AddTab("General"), Exploit = Window:AddTab("Exploits"), ESP = Window:AddTab("ESP"), Visuals = Window:AddTab("Visuals"), Misc = Window:AddTab("Miscellaneous"), Config = Window:AddTab("Config") }
 
 local GeneralAutomation = Tabs.General:AddLeftGroupbox("Automation")
@@ -452,7 +452,7 @@ function Notify(TitleText, SubText, Duration, Force)
     LXLogo.AnchorPoint = Vector2.new(0.5, 0.5)
     LXLogo.Position = UDim2.fromScale(0.067, 0.5)
     LXLogo.Size = UDim2.fromScale(0.121, 0.9)
-    LXLogo.Image = "rbxassetid://90305907167101"
+    LXLogo.Image = "rbxassetid://3944668821"
     LXLogo.ScaleType = Enum.ScaleType.Fit
     LXLogo.Transparency = 1
 
@@ -461,7 +461,7 @@ function Notify(TitleText, SubText, Duration, Force)
     Title.Position = UDim2.fromScale(0.135, 0.35)
     Title.Size = UDim2.fromScale(100, 0.35)
     Title.Font = Enum.Font.SourceSans
-    Title.Text = "[LOLHAX] " .. TitleText
+    Title.Text = "[ Wearspear ] " .. TitleText
     Title.TextScaled = true
     Title.TextSize = 1
     Title.TextStrokeTransparency = 0.5
@@ -1744,6 +1744,7 @@ local Connections = {
 
                     if Part and Toggles.ER_RemoveSeek.Value then
                         firetouchinterest(LocalPlayer.Character.Collision, Part, true and false)
+Part:Destroy()
                     end
                 end
             end
@@ -2611,7 +2612,7 @@ task.spawn(function()
         end
 
         print("[BloxstrapRPC] {\"command\": \"SetRichPresence\", \"data\": " .. game:GetService("HttpService"):JSONEncode({
-            details = Bool and "[ Playing DOORS 👁️ ] Lolhax.xyz" or "<reset>",
+            details = Bool and "[ Playing DOORS 👁️ ]" or "<reset>",
             state = Bool and State or "<reset>",
             largeImage = Bool and LargeImage or { reset = true },
             smallImage = Bool and { assetId = 16874068594, hoverText = "LOLHAX" } or { reset = true }
